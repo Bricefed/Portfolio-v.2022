@@ -1,0 +1,47 @@
+header {
+  position: relative;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  padding-inline: 150px;
+
+  h1 {
+    width: 550px;
+
+    img {
+      width: 20px;
+      margin-left: -10px;
+    }
+  }
+
+  p.presentation {
+    width: 750px;
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 1.5em;
+  }
+
+  h2 {
+    position: relative;
+    align-self: flex-end;
+    text-align: right;
+    width: 310px;
+
+    img {
+      position: absolute;
+      right: calc(-100% - 210px);
+      width: 285px;
+      border-radius: 150px 0 0 150px;
+      transform: translate(-50%, -50%);
+      transition: .5s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        right: -300px;
+      }
+    }
+  }
+}

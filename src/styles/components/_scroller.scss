@@ -1,0 +1,50 @@
+.scroller {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+
+  .circle {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    // background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .arrow {
+      position: absolute;
+      width: 130px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $dark;
+      color: $light;
+      font-size: 5em;
+    }
+
+    .text {
+      position: absolute;
+      width: 100%;
+      aspect-ratio: 1/1;
+      animation: rotation 10s infinite linear;
+
+      span {
+        position: absolute;
+        left: 50%;
+        font-size: 2em;
+        text-transform: uppercase;
+        transform-origin: 0 420%;
+      }
+    }
+  }
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}

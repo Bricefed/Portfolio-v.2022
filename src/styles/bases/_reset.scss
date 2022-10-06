@@ -11,6 +11,14 @@ body {
   font-family: "Neue Montreal", sans-serif;
   background: $light;
   color: $dark;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  font-size: 9em;
+  text-transform: uppercase;
+  line-height: 1em;
 }
 
 ul {
