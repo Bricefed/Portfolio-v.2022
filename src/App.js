@@ -1,7 +1,12 @@
-import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./containers/AnimatedRoutes";
 
 const App = () => {
-  return <>Hello !</>;
+  return (
+    <BrowserRouter>
+      <AnimatedRoutes />
+    </BrowserRouter>
+  );
 };
 
 export default App;
