@@ -34,10 +34,12 @@ header {
 
     img {
       position: absolute;
-      right: calc(-100% - 210px);
+      right: -50%;
+      bottom: 0;
       width: 285px;
-      border-radius: 150px 0 0 150px;
-      transform: translate(-50%, -50%);
+      border-radius: 150px;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
       transition: .5s ease-in-out;
 
       @media (max-width: 1100px) {
@@ -47,7 +49,8 @@ header {
 
     &:hover {
       img {
-        right: -300px;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
       }
     }
   }

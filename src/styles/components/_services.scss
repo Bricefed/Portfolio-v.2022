@@ -1,7 +1,6 @@
 section.services {
   position: relative;
-  height: 100vh;
-  padding-top: 100px;
+  padding-block: 100px 150px;
 
   &::before {
     content: "";
@@ -37,17 +36,21 @@ section.services {
     @media (max-width: 550px) {
       margin-left: 10px;
     }
+
+    h4 {
+      margin-bottom: 20px;
+    }
   }
 
   h6 {
     position: relative;
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
     display: inline-block;
     transform: rotate(-90deg) translate(300px, 0px);
 
     @media (max-width: 880px) {
-      font-size: 2em;
+      font-size: 2rem;
       transform: rotate(-90deg) translate(300px, -40px);
     }
 
