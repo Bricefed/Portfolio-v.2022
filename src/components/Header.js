@@ -8,7 +8,7 @@ const Header = () => {
         Développeur créatif
         <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
       </h1>
-      <p className="presentation">
+      <p className="description">
         Passionné des technologies du web. J'aime travailler à l'intersection de
         la créativité et des interfaces conviviales. Je crée des exprérences web
         mémorables.
