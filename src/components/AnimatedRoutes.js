@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Home from "../containers/Home";
+import Projects from "../containers/Projects";
+import Contact from "../containers/Contact";
 
 const AnimatedRoutes = () => {
   return (
