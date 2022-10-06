@@ -5,7 +5,8 @@ const Header = () => {
   return (
     <header>
       <h1>
-        Développeur créatif <img src={"./icons/triangle.png"} alt="Triangle" />
+        Développeur créatif
+        <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
       </h1>
       <p className="presentation">
         Passionné des technologies du web. J'aime travailler à l'intersection de
