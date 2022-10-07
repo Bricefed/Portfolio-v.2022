@@ -1,18 +1,17 @@
 import React from "react";
+import Number from "./Number";
+import Label from "./Label";
 
 const Services = () => {
   return (
     <section className="services">
-      <h3 className="number">
-        01
-        <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
-      </h3>
+      <Number value="1" />
       <div className="text-container">
         <div>
           <h4>Ux / ui</h4>
           <p className="description">
             Avant de créer un produit, il est important d'avoir un design. C'est
-            pourquoi je travaille avec mes clients à partir de zéro et ma
+            pourquoi je travaille avec mes cli ents à partir de zéro et ma
             première étape est de créer une version design du futur produit.
           </p>
         </div>
@@ -26,7 +25,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <h6>Mes services</h6>
+      <Label name="Mes services" />
     </section>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
+import Projects from "../components/Projects";
 import Services from "../components/Services";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Navigation />
       <Header />
       <Services />
+      <Projects />
     </>
   );
 };
