@@ -1,6 +1,6 @@
 const Number = ({ value }) => {
   return (
-    <h3 className="number">
+    <h3>
       {value}
       <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
     </h3>

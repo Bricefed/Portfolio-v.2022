@@ -11,15 +11,13 @@ const Services = () => {
     <section className="services">
       <Number value="1" />
       <div className="text-container">
-        {services.map((service) => {
-          return (
-            <Service
-              key={service.id}
-              title={service.title}
-              description={service.description}
-            />
-          );
-        })}
+        {services.map((service) => (
+          <Service
+            key={service.id}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
       </div>
       <Label name="Mes services" />
     </section>

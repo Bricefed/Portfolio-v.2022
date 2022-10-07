@@ -1,7 +1,6 @@
 h1,
 h2 {
   font-size: 9rem;
-  text-transform: uppercase;
   line-height: 1em;
 
   @media (max-width: 1100px) {
@@ -20,30 +19,27 @@ h2 {
 h3 {
   font-size: 8rem;
   margin-left: 220px;
+  font-weight: 100;
 
-  &.number {
-    font-weight: 100;
-
-    @media (max-width: 1100px) {
-      margin-left: 100px;
-    }
-
-    @media (max-width: 880px) {
-      font-size: 6rem;
-      margin-left: 30px;
-      margin-bottom: 50px;
-    }
-
-    @media (max-width: 550px) {
-      margin-left: 10px;
-    }
+  @media (max-width: 1100px) {
+    margin-left: 100px;
   }
 
+  @media (max-width: 880px) {
+    font-size: 6rem;
+    margin-left: 30px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 550px) {
+    margin-left: 10px;
+  }
 }
+
+
 
 h4 {
   font-size: 8rem;
-  text-transform: uppercase;
 
   @media (max-width: 1100px) {
     font-size: 6rem;
@@ -64,7 +60,6 @@ h4 {
 
 h5 {
   font-size: 6.5rem;
-  text-transform: uppercase;
 
   @media (max-width: 1100px) {
     font-size: 6rem;
@@ -76,7 +71,6 @@ h6 {
   top: 0;
   left: 0;
   font-size: 3rem;
-  text-transform: uppercase;
   transform: rotate(-90deg) translateX(-70vh);
 
   @media (max-width: 1100px) {

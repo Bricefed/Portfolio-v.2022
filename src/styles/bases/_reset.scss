@@ -14,6 +14,7 @@ body {
   font-family: "Neue Montreal", sans-serif;
   background: $light;
   color: $dark;
+  text-transform: uppercase;
 }
 
 #root {
@@ -38,7 +39,6 @@ a {
 p.description {
   width: min(750px, 95%);
   font-size: 2rem;
-  text-transform: uppercase;
   line-height: 1.5em;
   color: $grey;
 

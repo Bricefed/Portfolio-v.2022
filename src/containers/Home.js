@@ -1,7 +1,8 @@
-import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation";
-import Projects from "../components/Projects/Projects";
+import Header from "../components/Header/Header";
 import Services from "../components/Services/Services";
+import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <Services />
       <Projects />
+      <Contact />
     </>
   );
 };

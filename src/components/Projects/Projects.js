@@ -10,16 +10,14 @@ const Projects = () => {
   return (
     <section className="projects">
       <Number value="2" />
-      {projects.map((project) => {
-        return (
-          <Project
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            img={project.img}
-          />
-        );
-      })}
+      {projects.map((project) => (
+        <Project
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          img={project.img}
+        />
+      ))}
       <Label name="Mes projects" />
     </section>
   );
