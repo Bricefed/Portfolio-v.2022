@@ -1,7 +1,7 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Navigation from "../components/Navigation";
-import Projects from "../components/Projects";
-import Services from "../components/Services";
+import Projects from "../components/Projects/Projects";
+import Services from "../components/Services/Services";
 
 const Home = () => {
   return (

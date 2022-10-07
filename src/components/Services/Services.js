@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Number from "./Number";
-import Label from "./Label";
-import { dataServices } from "../data/homeServices";
-import SectionServices from "./SectionServices";
+import Number from "../Number";
+import Label from "../Label";
+import Service from "../Services/Service";
+import { dataServices } from "../../data/home/services";
 
 const Services = () => {
   const [services] = useState(dataServices);
@@ -13,7 +13,7 @@ const Services = () => {
       <div className="text-container">
         {services.map((service) => {
           return (
-            <SectionServices
+            <Service
               key={service.id}
               title={service.title}
               description={service.description}
