@@ -1,5 +1,3 @@
-import React from "react";
-
 const SectionProject = ({ title, description, img }) => {
   return (
     <div className="container-project">

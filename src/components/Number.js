@@ -1,5 +1,3 @@
-import React from "react";
-
 const Number = ({ value }) => {
   return (
     <h3 className="number">

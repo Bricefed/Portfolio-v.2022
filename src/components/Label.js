@@ -1,5 +1,3 @@
-import React from "react";
-
 const Label = ({ name }) => {
   return (
     <h6>
