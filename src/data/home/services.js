@@ -7,7 +7,7 @@ export const dataServices = [
   },
   {
     id: 2,
-    title: "Plantex",
+    title: "Developpement",
     description:
       "Une fois le design prêt, il est temps de donner vie à votre concept. C'est alors que mes compétences en programmation seront nécessaires. Je transforme toutes les conceptions en produits finis de haute qualité avec un contrôle au pixel près.",
   },

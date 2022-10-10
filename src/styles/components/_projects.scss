@@ -39,6 +39,7 @@ section.projects {
     }
 
     .img-box {
+      position: relative;
       width: 60%;
 
       @media (max-width: 880px) {
@@ -48,6 +49,7 @@ section.projects {
       img {
         width: 100%;
         object-fit: cover;
+        z-index: 9;
 
         @media (max-width: 880px) {
           height: 500px;

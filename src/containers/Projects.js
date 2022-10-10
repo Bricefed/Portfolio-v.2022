@@ -1,7 +1,11 @@
-import Navigation from "../components/Navigation";
+import Navigation from "../components/Navigation/Navigation";
 
 const Projects = () => {
-  return <Navigation />;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 };
 
 export default Projects;

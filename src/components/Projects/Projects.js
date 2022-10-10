@@ -11,12 +11,7 @@ const Projects = () => {
     <section className="projects">
       <Number value="2" />
       {projects.map((project) => (
-        <Project
-          key={project.id}
-          title={project.title}
-          description={project.description}
-          img={project.img}
-        />
+        <Project key={project.id} data={project} />
       ))}
       <Label name="Mes projects" />
     </section>

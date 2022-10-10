@@ -1,12 +1,19 @@
-const SectionProject = ({ title, description, img }) => {
+import { Link } from "react-router-dom";
+
+const SectionProject = ({ data }) => {
   return (
     <div className="container-project">
       <div className="texts">
-        <h5>{title}</h5>
-        <p className="description">{description}</p>
+        <h5>{data.title}</h5>
+        <p className="description">{data.description}</p>
       </div>
-      <div className="img-box">
-        <img src={`./imgs/projects/${img}`} alt="Projet plantex" />
+      <div className="img-box see-more">
+        <Link to={`/project/${data.title}`} className="hovered">
+          <img
+            src={`./imgs/projects/${data.img}`}
+            alt={`Projet ${data.title}`}
+          />
+        </Link>
       </div>
     </div>
   );
