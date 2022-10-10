@@ -2,8 +2,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 30px 150px;
+  padding-inline: 150px;
   font-size: 2rem;
+  margin-top: 10px;
 
   @media (max-width: 1100px) {
     padding-inline: 30px;
@@ -13,31 +14,21 @@ nav {
     padding-inline: 10px;
   }
 
-  ul.links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  .logo {
+    width: 40px;
+    margin-right: 50px;
+
+    @media (max-width: 1100px) {
+      margin-right: 10px;
+    }
 
     @media (max-width: 500px) {
-      gap: 15px;
+      margin-right: 0;
     }
-
-    .logo {
-      width: 40px;
-      margin-right: 50px;
-
-      @media (max-width: 1100px) {
-        margin-right: 10px;
-      }
-
-      @media (max-width: 500px) {
-        margin-right: 0;
-      }
-    }
-
   }
 
-  ul.options {
+  ul.links {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -46,13 +37,9 @@ nav {
       gap: 15px;
     }
 
-    .lang {
-      opacity: 0.5;
-    }
-
-    img {
-      width: 24px;
-      margin-top: 5px;
+    .navLink {
+      display: block;
+      transition: transform .3s linear;
     }
   }
 }

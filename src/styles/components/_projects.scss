@@ -41,14 +41,21 @@ section.projects {
     .img-box {
       position: relative;
       width: 60%;
+      overflow: hidden;
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+          filter: grayscale(0);
+        }
+      }
 
       @media (max-width: 880px) {
         width: 100%;
         z-index: 10;
-        overflow: hidden;
 
         &::after {
-          content: 'VOIR PLUS';
+          content: 'VOIR';
           position: absolute;
           top: 50%;
           left: 50%;
@@ -68,6 +75,8 @@ section.projects {
         width: 100%;
         object-fit: cover;
         z-index: 9;
+        filter: grayscale(100%);
+        transition: all .5s;
 
         @media (max-width: 880px) {
           height: 500px;

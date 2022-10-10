@@ -1,11 +1,11 @@
-import { BrowserRouter } from "react-router-dom";
-import AnimatedRoutes from "./components/AnimatedRoutes";
+import Home from "./containers/Home";
+import CursorContextProvider from "./context/CursorContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <AnimatedRoutes />
-    </BrowserRouter>
+    <CursorContextProvider>
+      <Home />
+    </CursorContextProvider>
   );
 };
 

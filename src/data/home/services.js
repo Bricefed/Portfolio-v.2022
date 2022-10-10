@@ -3,7 +3,7 @@ export const dataServices = [
     id: 1,
     title: "Ux / ui",
     description:
-      "Avant de créer un produit, il est important d'avoir un design. C'est pourquoi je travaille avec mes cli ents à partir de zéro et ma première étape est de créer une version design du futur produit.",
+      "Avant de créer un produit, il est important d'avoir un design. C'est pourquoi je travaille avec mes clients à partir de zéro et ma première étape est de créer une version design du futur produit.",
   },
   {
     id: 2,

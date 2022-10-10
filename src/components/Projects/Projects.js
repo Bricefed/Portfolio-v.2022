@@ -1,14 +1,14 @@
 import { useState } from "react";
 import Number from "../Number";
-import Project from "./Project";
 import Label from "../Label";
 import { dataProjects } from "../../data/home/projects";
+import Project from "./Project";
 
 const Projects = () => {
   const [projects] = useState(dataProjects);
 
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <Number value="2" />
       {projects.map((project) => (
         <Project key={project.id} data={project} />

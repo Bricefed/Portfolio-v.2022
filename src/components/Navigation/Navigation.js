@@ -1,32 +1,43 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Cursor from "../Cursor";
 import Logo from "./imgs/logo.svg";
-import Moon from "./imgs/moon.png";
-// import Sun from "./imgs/sun.png";
 
 const Navigation = () => {
+  useEffect(() => {
+    const link = document.querySelectorAll("a.navLink");
+
+    link.forEach((link) => {
+      link.addEventListener("mousemove", (e) => {
+        const pos = link.getBoundingClientRect();
+        const y = e.pageY - pos.top - pos.width / 2;
+        const x = e.pageX - pos.left - pos.width / 2;
+
+        link.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+
+      link.addEventListener("mouseout", () => {
+        link.style.transform = `translate(0, 0)`;
+      });
+    });
+  }, []);
+
   return (
     <>
       <Cursor />
       <nav>
+        <a href="#home">
+          <img src={Logo} alt="Logo siteweb" className="logo" />
+        </a>
         <ul className="links">
           <li>
-            <Link to={"/"}>
-              <img src={Logo} alt="Logo siteweb" className="logo" />
-            </Link>
+            <a href="#projects" className="navLink">
+              Projets
+            </a>
           </li>
           <li>
-            <Link to={"/projects"}>Projets</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>Contact</Link>
-          </li>
-        </ul>
-        <ul className="options">
-          <li className="lang">En</li>
-          <li>
-            <img src={Moon} alt="Dark mode" className="moon" />
-            {/* <img src={Sun} alt="Light mode" className="sun" /> */}
+            <a href="#contact" className="navLink">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
