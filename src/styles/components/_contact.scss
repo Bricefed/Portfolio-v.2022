@@ -6,6 +6,7 @@ section.contact {
 
   @media (max-width: 880px) {
     gap: 50px;
+    margin-top: 100px;
 
     h3 {
       margin-bottom: 0;
@@ -23,6 +24,11 @@ section.contact {
     @media (max-width: 1100px) {
       padding-inline: 30px;
       font-size: 2rem;
+    }
+
+    @media (max-width: 880px) {
+      display: flex;
+      flex-direction: column;
     }
   }
 

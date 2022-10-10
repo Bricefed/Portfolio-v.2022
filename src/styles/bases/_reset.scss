@@ -16,6 +16,8 @@ body {
   background: $light;
   color: $dark;
   text-transform: uppercase;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 #root {

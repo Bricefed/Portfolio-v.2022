@@ -14,8 +14,8 @@ const Contact = () => {
     <section id="contact" className="contact">
       <Number value={3} />
       <div className="texts">
-        <p>Envie de travailler ensemble ?</p>
-        <p>Envoyer moi un message !</p>
+        <p>Envie de travailler ensemble?</p>
+        <p>Envoyer moi un message!</p>
       </div>
       <CopyToClipboard text={"hello@bricefedou.com"}>
         <div className="email" onClick={copyText}>

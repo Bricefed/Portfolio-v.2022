@@ -65,8 +65,8 @@ section.projects {
           background: white;
           border-radius: 50%;
           display: flex;
+          justify-content: center;
           align-items: center;
-          text-align: center;
           font-size: 3rem;
         }
       }
@@ -80,6 +80,7 @@ section.projects {
 
         @media (max-width: 880px) {
           height: 500px;
+          filter: grayscale(0);
         }
       }
     }
