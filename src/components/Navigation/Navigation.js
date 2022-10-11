@@ -1,8 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Waypoint } from "react-waypoint";
+import { motion } from "framer-motion";
 import Cursor from "../Cursor";
-import Logo from "./imgs/logo.svg";
+import Logo from "./Logo";
+import Item from "./Item";
 
 const Navigation = () => {
+  const [move, setMove] = useState(false);
+
+  //ANIMATIONS
+  const container = {
+    hidden: (i = 0) => ({
+      opacity: move ? 0 : 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.05 * i },
+    }),
+    visible: (i = 0) => ({
+      opacity: move ? 1 : 0,
+      transition: { staggerChildren: 0.15, delayChildren: 0.05 * i },
+    }),
+  };
+  const child = {
+    hidden: {
+      opacity: move ? 1 : 0,
+      y: move ? 0 : -30,
+      transition: { type: "spring", damping: 12, stiffness: 100 },
+    },
+    visible: {
+      opacity: move ? 1 : 0,
+      y: move ? 0 : -30,
+      transition: { type: "spring", damping: 12, stiffness: 100 },
+    },
+  };
+
+  //EFFECT ON HOVER LINK
   useEffect(() => {
     const link = document.querySelectorAll("a.navLink");
 
@@ -24,23 +54,18 @@ const Navigation = () => {
   return (
     <>
       <Cursor />
-      <nav>
-        <a href="#home">
-          <img src={Logo} alt="Logo siteweb" className="logo" />
-        </a>
+      <motion.nav variants={container} initial="hidden" animate="visible">
+        <Logo anim={child} />
         <ul className="links">
-          <li>
-            <a href="#projects" className="navLink">
-              Projets
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="navLink">
-              Contact
-            </a>
-          </li>
+          <Item anim={child} link="#projects" name="Projets" />
+          <Item anim={child} link="#contact" name="Contact" />
         </ul>
-      </nav>
+      </motion.nav>
+      <Waypoint
+        onEnter={() => setMove(!move)}
+        onLeave={() => setMove(!move)}
+        topOffset="50px"
+      />
     </>
   );
 };
