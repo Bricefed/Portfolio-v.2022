@@ -1,12 +1,10 @@
 import Scroller from "./Scroller";
+import TitleH1 from "./TitleH1";
 
 const Header = () => {
   return (
     <header>
-      <h1>
-        Développeur créatif
-        <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
-      </h1>
+      <TitleH1 text="Développeur créatif" />
       <p className="description">
         Passionné des technologies du web. J'aime travailler à l'intersection de
         la créativité et des interfaces conviviales. Je crée des exprérences web
