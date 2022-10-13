@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const TitleH1 = ({ text }) => {
+const TitleH2 = ({ text }) => {
   const [visible, setVisible] = useState(false);
   const letter = Array.from(text);
 
@@ -10,7 +10,7 @@ const TitleH1 = ({ text }) => {
     hidden: { opacity: visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.05, when: "beforeChildren" },
+      transition: { staggerChildren: 0.08, delay: 0.5, when: "beforeChildren" },
     },
   };
 
@@ -26,31 +26,16 @@ const TitleH1 = ({ text }) => {
       transition: { type: "spring", damping: 20, stiffness: 100 },
     },
   };
-
-  const triangle = {
-    hidden: { scale: visible ? 1 : 0 },
-    visible: {
-      scale: visible ? 1 : 0,
-      transition: { delay: 0.8 },
-    },
-  };
-
   return (
-    <motion.h1 variants={container} initial="hidden" animate="visible">
+    <motion.h2 variants={container} initial="hidden" animate="visible">
+      <Waypoint onEnter={() => setVisible(true)} />
       {letter.map((text, k) => (
         <motion.span key={k} variants={child}>
-          {text}
+          {text}{" "}
         </motion.span>
       ))}
-      <motion.img
-        src={"./icons/triangle.png"}
-        alt="Triangle"
-        className="triangle"
-        variants={triangle}
-      />
-      <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
-    </motion.h1>
+    </motion.h2>
   );
 };
 
-export default TitleH1;
+export default TitleH2;

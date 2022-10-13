@@ -30,28 +30,6 @@ header {
     position: relative;
     align-self: flex-end;
     text-align: right;
-    width: 310px;
-
-    img {
-      position: absolute;
-      right: -50%;
-      bottom: 0;
-      width: 285px;
-      border-radius: 150px;
-      transform: translate(-50%, -50%) scale(0);
-      opacity: 0;
-      transition: .5s ease-in-out;
-
-      @media (max-width: 1100px) {
-        display: none;
-      }
-    }
-
-    &:hover {
-      img {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-      }
-    }
+    width: 300px;
   }
 }

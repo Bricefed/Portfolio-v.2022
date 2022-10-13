@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Waypoint } from "react-waypoint";
+import { motion } from "framer-motion";
 
 const Scroller = () => {
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     const text = document.querySelector(".scroller .text p");
     text.innerHTML = text.innerText
@@ -14,15 +18,29 @@ const Scroller = () => {
       .join("");
   }, []);
 
+  const container = {
+    hidden: { scale: visible ? 1 : 0 },
+    visible: {
+      scale: visible ? 1 : 0,
+      transition: { delay: 1.7 },
+    },
+  };
+
   return (
-    <div className="scroller">
+    <motion.div
+      className="scroller"
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="circle">
         <div className="arrow">↓</div>
         <div className="text">
           <p>Scroll-pour-explorer •</p>
         </div>
       </div>
-    </div>
+      <Waypoint onEnter={() => setVisible(true)} />
+    </motion.div>
   );
 };
 

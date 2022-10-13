@@ -6,38 +6,36 @@ import Logo from "./Logo";
 import Item from "./Item";
 
 const Navigation = () => {
-  const [move, setMove] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  //ANIMATIONS
   const container = {
-    hidden: (i = 0) => ({
-      opacity: move ? 0 : 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.05 * i },
-    }),
-    visible: (i = 0) => ({
-      opacity: move ? 1 : 0,
-      transition: { staggerChildren: 0.15, delayChildren: 0.05 * i },
-    }),
+    hidden: {
+      opacity: visible ? 0 : 1,
+      transition: { staggerChildren: 0.15 },
+    },
+    visible: {
+      opacity: visible ? 1 : 0,
+      transition: { staggerChildren: 0.15 },
+    },
   };
   const child = {
     hidden: {
-      opacity: move ? 1 : 0,
-      y: move ? 0 : -30,
+      opacity: visible ? 1 : 0,
+      y: visible ? 0 : -30,
       transition: { type: "spring", damping: 12, stiffness: 100 },
     },
     visible: {
-      opacity: move ? 1 : 0,
-      y: move ? 0 : -30,
+      opacity: visible ? 1 : 0,
+      y: visible ? 0 : -30,
       transition: { type: "spring", damping: 12, stiffness: 100 },
     },
   };
 
-  //EFFECT ON HOVER LINK
   useEffect(() => {
     const link = document.querySelectorAll("a.navLink");
 
     link.forEach((link) => {
-      link.addEventListener("mousemove", (e) => {
+      link.addEventListener("mousevisible", (e) => {
         const pos = link.getBoundingClientRect();
         const y = e.pageY - pos.top - pos.width / 2;
         const x = e.pageX - pos.left - pos.width / 2;
@@ -61,11 +59,7 @@ const Navigation = () => {
           <Item anim={child} link="#contact" name="Contact" />
         </ul>
       </motion.nav>
-      <Waypoint
-        onEnter={() => setMove(!move)}
-        onLeave={() => setMove(!move)}
-        topOffset="50px"
-      />
+      <Waypoint onEnter={() => setVisible(true)} topOffset="50px" />
     </>
   );
 };
