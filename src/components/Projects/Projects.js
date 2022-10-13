@@ -13,7 +13,7 @@ const Projects = () => {
       {projects.map((project) => (
         <Project key={project.id} data={project} />
       ))}
-      <Label name="Mes projects" />
+      <Label name="Mes projects" section="projects" />
     </section>
   );
 };

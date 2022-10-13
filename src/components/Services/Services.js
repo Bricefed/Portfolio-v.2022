@@ -19,7 +19,7 @@ const Services = () => {
           />
         ))}
       </div>
-      <Label name="Mes services" />
+      <Label name="Mes services" section="services" />
     </section>
   );
 };

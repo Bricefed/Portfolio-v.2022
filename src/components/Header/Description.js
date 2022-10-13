@@ -43,7 +43,7 @@ const Description = ({ text }) => {
           </motion.span>
         ))}
       </motion.p>
-      <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
+      <Waypoint onEnter={() => setVisible(true)} />
     </>
   );
 };

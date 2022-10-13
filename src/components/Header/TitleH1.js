@@ -48,7 +48,7 @@ const TitleH1 = ({ text }) => {
         className="triangle"
         variants={triangle}
       />
-      <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
+      <Waypoint onEnter={() => setVisible(true)} />
     </motion.h1>
   );
 };
