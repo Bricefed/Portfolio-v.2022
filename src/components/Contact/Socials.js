@@ -1,16 +1,12 @@
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
-
-//IMG
+import { dataSocials } from "../../data/contact/socials";
 import Social from "./Social";
-import Linkedin from "./img/linkedin.svg";
-import Github from "./img/github.svg";
-import Instagram from "./img/instagram.svg";
-import Malt from "./img/malt.svg";
 
-const Socials = ({ anim }) => {
+const Socials = () => {
   const [visible, setVisible] = useState(false);
+  const [socials] = useState(dataSocials);
 
   const container = {
     hidden: {
@@ -45,30 +41,14 @@ const Socials = ({ anim }) => {
         initial="hidden"
         animate="visible"
       >
-        <Social
-          img={Linkedin}
-          title={"Linkedin"}
-          link={"https://www.linkedin.com/in/brice-fedou-928b89190/"}
-          anim={child}
-        />
-        <Social
-          img={Github}
-          title={"Github"}
-          link={"https://github.com/Bricefed"}
-          anim={child}
-        />
-        <Social
-          img={Instagram}
-          title={"Instagram"}
-          link={"https://www.instagram.com/codeur369/"}
-          anim={child}
-        />
-        <Social
-          img={Malt}
-          title={"Malt"}
-          link={"https://www.malt.fr/profile/bricefedou?overview=true"}
-          anim={child}
-        />
+        {socials.map((social) => (
+          <Social
+            img={social.img}
+            title={social.title}
+            link={social.link}
+            anim={child}
+          />
+        ))}
       </motion.div>
     </>
   );

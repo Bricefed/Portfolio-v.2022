@@ -4,7 +4,7 @@ const Social = ({ title, img, link, anim }) => {
   return (
     <motion.div className="social" variants={anim}>
       <a href={link} target="_blank" rel="noreferrer">
-        <img src={img} alt={title} />
+        <img src={`./icons/socials/${img}`} alt={title} />
         <p>{title}</p>
       </a>
     </motion.div>
