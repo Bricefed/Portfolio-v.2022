@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <TitleH1 text="Développeur créatif" />
-      <Description text="Passionné des technologies du web. J'aime travailler à l'intersection de la créativité et des interfaces conviviales. Je crée des exprérences web mémorables." />
+      <Description text="Passionné des technologies du web. J'aime travailler à l'intersection de la créativité et des interfaces conviviales. Je crée des expérences web mémorable." />
       <TitleH2 text="Brice Fedou" />
       <Scroller />
     </header>

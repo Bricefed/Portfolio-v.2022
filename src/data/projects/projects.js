@@ -5,7 +5,8 @@ export const dataProjects = [
     img: "plantex.jpg",
     link: "https://bricefed.github.io/Plantex/",
     description:
-      "Site vitrine orienter e-commerce, dans le but de s'exercer avec ReactJS.",
+      "Site vitrine orienté e-commerce, dans le but de s'exercer avec ReactJS & SASS.",
+    languages: ["Javascript", "ReactJS", "Sass"],
   },
   {
     id: 2,
@@ -14,12 +15,14 @@ export const dataProjects = [
     link: "https://castelbox.com/",
     description:
       "Création complète du site pour la location de box de stockage avec un calculateur de surface.",
+    languages: ["Javascript", "PHP", "Symfony", "Sass"],
   },
   {
     id: 3,
     title: "Portfolio",
     img: "portfolio.jpg",
     link: "http://www.brice-fedou.com/",
-    description: "Lorem test 3",
+    description: "Ancienne version de mon portfolio personnel.",
+    languages: ["Javascript", "ReactJS", "Sass"],
   },
 ];
