@@ -9,6 +9,7 @@ const SectionProject = ({ data }) => {
       <div className="content">
         <TitleH5 title={data.title} />
         <Description description={data.description} />
+        <div className="divider"></div>
         <Languages languages={data.languages} />
       </div>
       <ImgProject img={data.img} title={data.title} link={data.link} />

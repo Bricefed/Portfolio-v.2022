@@ -46,14 +46,22 @@ section#projects {
       margin-right: 20px;
 
       .description {
-        margin-top: 15px;
+        margin-block: 15px;
+      }
+
+      .divider {
+        width: 100%;
+        height: 2px;
+        background: $grey;
+
       }
 
       .container-languages {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-top: 30px;
+        margin-top: 50px;
+        margin-left: 30px;
         font-size: 1.8rem;
 
         .language {
@@ -74,6 +82,7 @@ section#projects {
 
           span {
             transition: color .3s;
+            margin-right: 10px;
           }
         }
       }
