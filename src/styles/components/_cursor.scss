@@ -1,3 +1,5 @@
+@import "../mixins/cursor";
+
 #cursor {
   position: absolute;
   top: -50%;
@@ -18,34 +20,18 @@
   }
 
   &.hover-img {
-    width: 150px;
-    background: white;
-    mix-blend-mode: normal;
+    @include circle;
 
     .see-more {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 3rem;
-      opacity: 1;
+      @include inside-circle;
     }
   }
 
   &.hover-copy {
-    width: 150px;
-    background: white;
-    mix-blend-mode: normal;
+    @include circle;
 
     .copy {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-size: 3rem;
-      opacity: 1;
+      @include inside-circle;
     }
   }
 }

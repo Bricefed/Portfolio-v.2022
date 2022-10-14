@@ -6,6 +6,7 @@ const TitleH1 = ({ text }) => {
   const [visible, setVisible] = useState(false);
   const letter = Array.from(text);
 
+  //SPAWN ANIMATION
   const container = {
     hidden: { opacity: visible ? 0 : 1 },
     visible: {
@@ -36,20 +37,22 @@ const TitleH1 = ({ text }) => {
   };
 
   return (
-    <motion.h1 variants={container} initial="hidden" animate="visible">
-      {letter.map((text, k) => (
-        <motion.span key={k} variants={child}>
-          {text}
-        </motion.span>
-      ))}
-      <motion.img
-        src={"./icons/triangle.png"}
-        alt="Triangle"
-        className="triangle"
-        variants={triangle}
-      />
+    <>
       <Waypoint onEnter={() => setVisible(true)} />
-    </motion.h1>
+      <motion.h1 variants={container} initial="hidden" animate="visible">
+        {letter.map((text, k) => (
+          <motion.span key={k} variants={child}>
+            {text}
+          </motion.span>
+        ))}
+        <motion.img
+          src={"./icons/triangle.png"}
+          alt="Triangle"
+          className="triangle"
+          variants={triangle}
+        />
+      </motion.h1>
+    </>
   );
 };
 

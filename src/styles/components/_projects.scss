@@ -27,32 +27,19 @@ section#projects {
       padding-left: 20%;
     }
 
+    @media (max-width: 980px) {
+      padding-left: 10%;
+    }
+
     @media (max-width: 880px) {
       padding-left: 30px;
       flex-direction: column;
-    }
-
-    h5 {
-      margin-right: 10px;
-      width: 50%;
-
-      @media (max-width: 880px) {
-        width: 100%;
-        margin-bottom: 50px;
-      }
     }
 
     .img-box {
       position: relative;
       width: 60%;
       overflow: hidden;
-
-      &:hover {
-        img {
-          transform: scale(1.1);
-          filter: grayscale(0);
-        }
-      }
 
       @media (max-width: 1200px) {
         width: 55%;
@@ -68,14 +55,19 @@ section#projects {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          @include df-center;
           width: 120px;
           aspect-ratio: 1/1;
           background: white;
           border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           font-size: 3rem;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+          filter: grayscale(0);
         }
       }
 

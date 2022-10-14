@@ -4,6 +4,9 @@
 @import "./bases/reset";
 @import "./bases/titles";
 
+//MIXINS
+@import "./mixins/flex-box";
+
 //COMPONENTS
 @import "./components/cursor";
 @import "./components/navigation";

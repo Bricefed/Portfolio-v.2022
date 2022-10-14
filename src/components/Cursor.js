@@ -12,7 +12,7 @@ const Cursor = () => {
       cursor.style.left = e.pageX + "px";
     });
 
-    //IMG
+    //HOVER IMG
     document.querySelectorAll(".see-more").forEach((img) => {
       img.addEventListener("mouseenter", () => {
         cursor.classList.add("hover-img");
@@ -22,7 +22,7 @@ const Cursor = () => {
       });
     });
 
-    //EMAIL
+    //HOVER EMAIL
     document.querySelector(".email").addEventListener("mouseenter", () => {
       cursor.classList.add("hover-copy");
     });

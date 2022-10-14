@@ -68,9 +68,7 @@ section#contact {
     }
 
     .social a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include df-center;
       gap: 15px;
 
 

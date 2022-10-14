@@ -7,6 +7,7 @@ import Item from "./Item";
 const Navigation = () => {
   const [visible, setVisible] = useState(false);
 
+  //HOVER LINK
   useEffect(() => {
     const link = document.querySelectorAll("a.navLink");
 
@@ -25,6 +26,7 @@ const Navigation = () => {
     });
   }, []);
 
+  //SPAWN ANIMATION
   const container = {
     hidden: {
       opacity: visible ? 1 : 0,
