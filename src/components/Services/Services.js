@@ -2,7 +2,7 @@ import { useState } from "react";
 import Number from "../Number";
 import Label from "../Label";
 import Service from "../Services/Service";
-import { dataServices } from "../../data/home/services";
+import { dataServices } from "../../data/services/services";
 
 const Services = () => {
   const [services] = useState(dataServices);

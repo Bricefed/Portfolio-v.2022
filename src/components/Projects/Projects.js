@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { dataProjects } from "../../data/home/projects";
+import { dataProjects } from "../../data/projects/projects";
 import Number from "../Number";
 import Project from "./Project";
 import Label from "../Label";
