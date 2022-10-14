@@ -8,8 +8,8 @@ const Cursor = () => {
     const cursor = document.getElementById("cursor");
 
     window.addEventListener("mousemove", (e) => {
-      cursor.style.top = e.pageY + "px";
-      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.clientY + "px";
+      cursor.style.left = e.clientX + "px";
     });
 
     //HOVER IMG

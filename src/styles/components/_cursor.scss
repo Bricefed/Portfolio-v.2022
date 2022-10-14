@@ -1,7 +1,7 @@
 @import "../mixins/cursor";
 
 #cursor {
-  position: absolute;
+  position: fixed;
   top: -50%;
   width: 30px;
   aspect-ratio: 1/1;
