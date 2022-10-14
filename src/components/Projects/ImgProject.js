@@ -27,7 +27,7 @@ const ImgProject = ({ img, title, link }) => {
         animate="visible"
       >
         <a href={link} className="hovered" target="_blank" rel="noreferrer">
-          <img src={`./imgs/projects/${img}`} alt={`Projet ${title}`} />
+          <img src={`./imgs/${img}`} alt={`Projet ${title}`} />
         </a>
       </motion.div>
     </>
