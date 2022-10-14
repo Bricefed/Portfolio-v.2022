@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Number from "../Number";
-import Label from "../Label";
+import Number from "../Texts/Number";
+import Label from "../Texts/Label";
 import Service from "../Services/Service";
 import { dataServices } from "../../data/services/services";
 

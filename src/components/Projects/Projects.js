@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { dataProjects } from "../../data/projects/projects";
-import Number from "../Number";
+import Number from "../Texts/Number";
 import Project from "./Project";
-import Label from "../Label";
+import Label from "../Texts/Label";
 
 const Projects = () => {
   const [projects] = useState(dataProjects);

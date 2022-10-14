@@ -1,4 +1,4 @@
-import Number from "../Number";
+import Number from "../Texts/Number";
 import Texts from "./Texts";
 import Email from "./Email";
 import Socials from "./Socials";
