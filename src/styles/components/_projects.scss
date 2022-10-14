@@ -36,6 +36,20 @@ section#projects {
       flex-direction: column;
     }
 
+    .content {
+      position: sticky;
+      top: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      margin-right: 20px;
+
+      .description {
+        margin-top: 15px;
+      }
+    }
+
     .img-box {
       position: relative;
       width: 60%;

@@ -32,9 +32,6 @@ const Label = ({ name, section }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      style={{
-        transform: `translateY(${offsetY * 0.3}px)`,
-      }}
       className={section}
     >
       {name}
@@ -42,7 +39,7 @@ const Label = ({ name, section }) => {
       <Waypoint
         onEnter={() => setVisible(true)}
         onLeave={() => setVisible(false)}
-        topOffset="300px"
+        topOffset="250px"
       />
     </motion.h6>
   );
