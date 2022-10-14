@@ -2,46 +2,44 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const Description = ({ text }) => {
+const Texts = ({ first, second }) => {
   const [visible, setVisible] = useState(false);
-  const words = text.split(" ");
 
   const container = {
-    hidden: { opacity: visible ? 0 : 1 },
+    hidden: { opacity: visible ? 1 : 0 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.03, delay: 1, when: "beforeChildren" },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
   const child = {
     hidden: {
       opacity: visible ? 1 : 0,
+      x: visible ? 0 : -50,
       transition: { type: "spring", damping: 20, stiffness: 100 },
     },
     visible: {
       opacity: visible ? 1 : 0,
+      x: visible ? 0 : -50,
       transition: { type: "spring", damping: 20, stiffness: 100 },
     },
   };
 
   return (
     <>
-      <Waypoint onEnter={() => setVisible(true)} />
-      <motion.p
-        className="description"
+      <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
+      <motion.div
+        className="texts"
         variants={container}
         initial="hidden"
         animate="visible"
       >
-        {words.map((text, k) => (
-          <motion.span key={k} variants={child}>
-            {text}{" "}
-          </motion.span>
-        ))}
-      </motion.p>
+        <motion.p variants={child}>{first}</motion.p>
+        <motion.p variants={child}>{second}</motion.p>
+      </motion.div>
     </>
   );
 };
 
-export default Description;
+export default Texts;

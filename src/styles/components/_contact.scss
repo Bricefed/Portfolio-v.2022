@@ -1,11 +1,13 @@
-section.contact {
+section#contact {
   display: flex;
   flex-direction: column;
-  gap: 120px;
-  margin-top: 200px;
+  margin-top: 150px;
+
+  >*:not(span) {
+    margin-block: 50px;
+  }
 
   @media (max-width: 880px) {
-    gap: 50px;
     margin-top: 100px;
 
     h3 {
@@ -33,7 +35,9 @@ section.contact {
   }
 
   .email {
-    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 630px;
     margin-left: 220px;
     font-size: 9rem;
     font-weight: bold;
@@ -57,7 +61,7 @@ section.contact {
     display: flex;
     justify-content: center;
     gap: 80px;
-    margin: 50px 0 30px;
+    margin: 80px 0 30px;
 
     @media (max-width: 880px) {
       gap: 30px;

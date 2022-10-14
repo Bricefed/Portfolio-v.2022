@@ -1,11 +1,13 @@
-const Social = ({ title, img, link }) => {
+import { motion } from "framer-motion";
+
+const Social = ({ title, img, link, anim }) => {
   return (
-    <div className="social">
+    <motion.div className="social" variants={anim}>
       <a href={link} target="_blank" rel="noreferrer">
-        <img src={`./icons/social/${img}`} alt={title} />
+        <img src={img} alt={title} />
         <p>{title}</p>
       </a>
-    </div>
+    </motion.div>
   );
 };
 

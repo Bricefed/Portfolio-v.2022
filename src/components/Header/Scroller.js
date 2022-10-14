@@ -22,7 +22,7 @@ const Scroller = () => {
     hidden: { scale: visible ? 1 : 0 },
     visible: {
       scale: visible ? 1 : 0,
-      transition: { delay: 1.7 },
+      transition: { delay: 2.3 },
     },
   };
 

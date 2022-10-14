@@ -1,11 +1,11 @@
 h1,
 h2 {
-  font-size: 9rem;
-  line-height: 1em;
-  overflow-y: hidden;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
+  font-size: 9rem;
+  line-height: 1em;
+  overflow-y: hidden;
 
   @media (max-width: 1100px) {
     font-size: 7rem;
@@ -43,7 +43,9 @@ h3 {
 
 
 h4 {
+  display: flex;
   font-size: 8rem;
+  overflow-y: hidden;
 
   @media (max-width: 1100px) {
     font-size: 6rem;
@@ -63,7 +65,9 @@ h4 {
 }
 
 h5 {
+  display: flex;
   font-size: 6.5rem;
+  overflow-y: hidden;
 
   @media (max-width: 1100px) {
     font-size: 6rem;

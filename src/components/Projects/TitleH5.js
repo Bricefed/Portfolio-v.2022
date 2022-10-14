@@ -2,25 +2,27 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const Description = ({ text }) => {
+const TitleH5 = ({ title }) => {
   const [visible, setVisible] = useState(false);
-  const words = text.split(" ");
+  const letter = Array.from(title);
 
   const container = {
     hidden: { opacity: visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.03, delay: 1, when: "beforeChildren" },
+      transition: { staggerChildren: 0.05, when: "beforeChildren" },
     },
   };
 
   const child = {
     hidden: {
-      opacity: visible ? 1 : 0,
+      opacity: 0,
+      y: visible ? 0 : 50,
       transition: { type: "spring", damping: 20, stiffness: 100 },
     },
     visible: {
       opacity: visible ? 1 : 0,
+      y: visible ? 0 : 50,
       transition: { type: "spring", damping: 20, stiffness: 100 },
     },
   };
@@ -28,20 +30,15 @@ const Description = ({ text }) => {
   return (
     <>
       <Waypoint onEnter={() => setVisible(true)} />
-      <motion.p
-        className="description"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
-        {words.map((text, k) => (
+      <motion.h5 variants={container} initial="hidden" animate="visible">
+        {letter.map((text, k) => (
           <motion.span key={k} variants={child}>
-            {text}{" "}
+            {text}
           </motion.span>
         ))}
-      </motion.p>
+      </motion.h5>
     </>
   );
 };
 
-export default Description;
+export default TitleH5;

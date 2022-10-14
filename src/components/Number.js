@@ -17,11 +17,13 @@ const Number = ({ value }) => {
   };
 
   return (
-    <motion.h3 variants={container} initial="hidden" animate="visible">
-      {value}
-      <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
+    <>
       <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
-    </motion.h3>
+      <motion.h3 variants={container} initial="hidden" animate="visible">
+        {value}
+        <img src={"./icons/triangle.png"} alt="Triangle" className="triangle" />
+      </motion.h3>
+    </>
   );
 };
 

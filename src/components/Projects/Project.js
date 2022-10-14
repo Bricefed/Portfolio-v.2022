@@ -1,17 +1,11 @@
+import TitleH5 from "./TitleH5";
+import ImgProject from "./ImgProject";
+
 const SectionProject = ({ data }) => {
   return (
     <div className="container-project">
-      <div className="texts">
-        <h5>{data.title}</h5>
-      </div>
-      <div className="img-box see-more">
-        <a href="www.google.com" className="hovered">
-          <img
-            src={`./imgs/projects/${data.img}`}
-            alt={`Projet ${data.title}`}
-          />
-        </a>
-      </div>
+      <TitleH5 title={data.title} />
+      <ImgProject img={data.img} title={data.title} link={data.link} />
     </div>
   );
 };

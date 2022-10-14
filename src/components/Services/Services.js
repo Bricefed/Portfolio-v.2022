@@ -8,7 +8,7 @@ const Services = () => {
   const [services] = useState(dataServices);
 
   return (
-    <section className="services">
+    <section id="services">
       <Number value="1" />
       <div className="text-container">
         {services.map((service) => (
