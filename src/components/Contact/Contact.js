@@ -11,7 +11,7 @@ const Contact = () => {
         first="Envie de travailler ensemble?"
         second="Envoyer moi un message!"
       />
-      <Email value="hello@bricefedou.com" />
+      <Email value="hello@brice-fedou.com" />
       <Socials />
     </section>
   );

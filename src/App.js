@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CursorContextProvider from "./context/CursorContext";
 import Cursor from "./components/Cursor";
 import Navigation from "./components/Navigation/Navigation";
@@ -6,7 +7,6 @@ import Services from "./components/Services/Services";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Loader from "./components/Loader";
-import { useState } from "react";
 
 const App = () => {
   const [onLoad, setOnLoad] = useState(false);

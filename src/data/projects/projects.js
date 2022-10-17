@@ -17,12 +17,4 @@ export const dataProjects = [
       "Création complète du site pour la location de box de stockage avec un calculateur de surface.",
     languages: ["Javascript", "PHP", "Symfony", "Sass"],
   },
-  {
-    id: 3,
-    title: "Portfolio",
-    img: "portfolio.jpg",
-    link: "http://www.brice-fedou.com/",
-    description: "Ancienne version de mon portfolio personnel.",
-    languages: ["Javascript", "ReactJS", "Sass"],
-  },
 ];
