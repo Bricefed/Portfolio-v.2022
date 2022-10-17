@@ -60,6 +60,7 @@ section#projects {
 
         @media (max-width: 880px) {
           flex-direction: row;
+          flex-wrap: wrap;
           gap: 30px;
           margin: 40px 0;
         }

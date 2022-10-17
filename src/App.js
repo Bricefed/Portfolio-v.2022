@@ -9,7 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Loader from "./components/Loader";
 
 const App = () => {
-  const [onLoad, setOnLoad] = useState(false);
+  const [onLoad, setOnLoad] = useState(true);
 
   return (
     <>

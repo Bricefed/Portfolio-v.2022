@@ -33,7 +33,8 @@ section#contact {
     width: clamp(28rem, 5.5642rem + 44.8718vw, 63rem);
     margin-left: clamp(1rem, -113.111rem + 105.5556vw, 22rem);
     font-size: clamp(4rem, 0.7949rem + 6.4103vw, 9rem);
-    font-weight: bold;
+    font-weight: 400;
+    letter-spacing: -3px;
     word-wrap: break-word;
     text-decoration: underline;
     cursor: none;
