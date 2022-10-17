@@ -3,145 +3,66 @@ h2 {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  font-size: 9rem;
+  width: clamp(30rem, 10.3659rem + 42.6829vw, 65rem);
+  font-size: clamp(4rem, 1.1952rem + 6.0976vw, 9rem);
   line-height: 1em;
   overflow-y: hidden;
   user-select: none;
   cursor: default;
-
-  @media (max-width: 1100px) {
-    font-size: 7rem;
-  }
-
-  @media (max-width: 570px) {
-    font-size: 6rem;
-  }
-
-  @media (max-width: 460px) {
-    font-size: 4rem;
-  }
-}
-
-h1 {
-  width: 650px;
-
-  @media (max-width: 1100px) {
-    width: 500px;
-  }
-
-  @media (max-width: 570px) {
-    width: 430px;
-  }
-
-  @media (max-width: 460px) {
-    width: 300px;
-  }
 }
 
 h2 {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
   align-self: flex-end;
-  text-align: right;
-  width: 300px;
-
-  @media (max-width: 1100px) {
-    width: 235px;
-  }
-
-  @media (max-width: 570px) {
-    width: 200px;
-  }
-
-  @media (max-width: 460px) {
-    width: 135px;
-  }
+  width: clamp(13.5rem, 4.2438rem + 20.122vw, 30rem);
 }
 
 h3 {
-  font-size: 8rem;
-  margin-left: 220px;
+  font-size: clamp(6rem, 1.6rem + 5vw, 8rem);
+  margin-left: clamp(1rem, -14.8219rem + 28.7671vw, 22rem);
   font-weight: 100;
   user-select: none;
   cursor: default;
 
-  @media (max-width: 1100px) {
-    margin-left: 100px;
-  }
-
   @media (max-width: 880px) {
-    font-size: 6rem;
-    margin-left: 30px;
     margin-bottom: 50px;
-  }
-
-  @media (max-width: 550px) {
-    margin-left: 10px;
   }
 }
 
-
-
 h4 {
   display: flex;
-  font-size: 8rem;
+  font-size: clamp(3.45rem, 1.6704rem + 4.9451vw, 8rem);
   margin-bottom: 20px;
   overflow-y: hidden;
   user-select: none;
   cursor: default;
-
-  @media (max-width: 1100px) {
-    font-size: 6rem;
-  }
-
-  @media (max-width: 880px) {
-    font-size: 5rem;
-  }
-
-  @media (max-width: 465px) {
-    font-size: 4rem;
-  }
-
-  @media (max-width: 370px) {
-    font-size: 3.5rem;
-  }
 }
 
 h5 {
   display: flex;
   top: 20px;
-  font-size: 6.5rem;
+  font-size: clamp(4rem, 2.3974rem + 3.2051vw, 6.5rem);
   overflow-y: hidden;
   user-select: none;
   cursor: default;
 
-  @media (max-width: 1100px) {
-    font-size: 6rem;
-  }
-
   @media (max-width: 880px) {
-    width: 100%;
     margin-bottom: 50px;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 4rem;
   }
 }
 
 h6 {
   position: absolute;
-  left: 30px;
+  left: clamp(1rem, -11.2222rem + 11.1111vw, 3rem);
   font-size: 3rem;
   writing-mode: vertical-rl;
   transition: translate .2s;
   user-select: none;
   cursor: default;
 
-  @media (max-width: 1100px) {
-    left: 10px;
-  }
-
-  @media (max-width: 880px) {
+  @media (max-width: 990px) {
     display: none;
   }
 

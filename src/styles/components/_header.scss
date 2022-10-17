@@ -5,15 +5,10 @@ header {
   justify-content: center;
   gap: 50px;
   height: calc(100vh - 50px);
-  padding-inline: 150px;
+  padding-inline: clamp(1rem, -7.9744rem + 17.9487vw, 15rem);
   overflow: hidden;
 
-  @media (max-width: 1100px) {
-    padding-inline: 30px;
-  }
-
   @media (max-width: 500px) {
-    padding-inline: 10px;
     justify-content: flex-start;
     padding-top: 120px;
   }
