@@ -9,7 +9,7 @@ import Loader from "./components/Loader";
 import { useState } from "react";
 
 const App = () => {
-  const [onLoad, setOnLoad] = useState(true);
+  const [onLoad, setOnLoad] = useState(false);
 
   return (
     <>

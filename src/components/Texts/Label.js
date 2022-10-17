@@ -15,9 +15,8 @@ const Label = ({ name, section }) => {
 
   const container = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      x: visible ? 0 : -50,
-      y: offsetY * 0.3,
+      opacity: !visible ? 0 : 1,
+      x: !visible ? -50 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,

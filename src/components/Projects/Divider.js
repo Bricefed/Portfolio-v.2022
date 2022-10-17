@@ -6,7 +6,7 @@ const Divider = () => {
   const [visible, setVisible] = useState(false);
 
   const container = {
-    hidden: { width: visible ? 0 : "100%" },
+    hidden: { width: !visible ? "100%" : 0 },
     visible: {
       width: visible ? "100%" : 0,
       transition: { duration: 1 },

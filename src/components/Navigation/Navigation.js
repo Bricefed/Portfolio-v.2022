@@ -28,10 +28,7 @@ const Navigation = () => {
 
   //SPAWN ANIMATION
   const container = {
-    hidden: {
-      opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.15 },
-    },
+    hidden: { opacity: !visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
       transition: { staggerChildren: 0.15 },
@@ -40,9 +37,8 @@ const Navigation = () => {
 
   const child = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      y: visible ? 0 : -30,
-      transition: { type: "spring", damping: 12, stiffness: 100 },
+      opacity: !visible ? 0 : 1,
+      y: !visible ? -30 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,

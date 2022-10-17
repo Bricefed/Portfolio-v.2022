@@ -8,7 +8,7 @@ const TitleH1 = ({ text }) => {
 
   //SPAWN ANIMATION
   const container = {
-    hidden: { opacity: visible ? 0 : 1 },
+    hidden: { opacity: !visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
       transition: { staggerChildren: 0.05, when: "beforeChildren" },
@@ -17,9 +17,8 @@ const TitleH1 = ({ text }) => {
 
   const child = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      y: visible ? 0 : 20,
-      transition: { type: "spring", damping: 20, stiffness: 100 },
+      opacity: !visible ? 0 : 1,
+      y: !visible ? 20 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,
@@ -29,7 +28,7 @@ const TitleH1 = ({ text }) => {
   };
 
   const triangle = {
-    hidden: { scale: visible ? 1 : 0 },
+    hidden: { scale: !visible ? 0 : 1 },
     visible: {
       scale: visible ? 1 : 0,
       transition: { delay: 0.8 },

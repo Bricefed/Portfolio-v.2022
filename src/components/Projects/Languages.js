@@ -7,10 +7,7 @@ const Languages = ({ languages }) => {
 
   //SPAWN ANIMATION
   const container = {
-    hidden: {
-      opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.05, delay: 0.2, when: "beforeChildren" },
-    },
+    hidden: { opacity: !visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
       transition: { staggerChildren: 0.05, delay: 0.2, when: "beforeChildren" },
@@ -19,9 +16,8 @@ const Languages = ({ languages }) => {
 
   const child = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      x: visible ? 0 : -50,
-      transition: { type: "spring", damping: 12, stiffness: 100 },
+      opacity: !visible ? 0 : 1,
+      x: !visible ? -50 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,
@@ -33,7 +29,6 @@ const Languages = ({ languages }) => {
   return (
     <>
       <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
-
       <motion.div
         className="container-languages"
         variants={container}

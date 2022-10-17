@@ -19,7 +19,7 @@ const Scroller = () => {
   }, []);
 
   const container = {
-    hidden: { scale: visible ? 1 : 0 },
+    hidden: { scale: !visible ? 0 : 1 },
     visible: {
       scale: visible ? 1 : 0,
       transition: { delay: 2.3 },

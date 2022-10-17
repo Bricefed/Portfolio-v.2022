@@ -7,8 +7,8 @@ const Number = ({ value }) => {
 
   const container = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      x: visible ? 0 : -250,
+      opacity: !visible ? 0 : 1,
+      x: !visible ? -250 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,

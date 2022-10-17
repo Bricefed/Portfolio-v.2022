@@ -7,7 +7,7 @@ const TitleH5 = ({ title }) => {
   const letter = Array.from(title);
 
   const container = {
-    hidden: { opacity: visible ? 0 : 1 },
+    hidden: { opacity: !visible ? 1 : 0 },
     visible: {
       opacity: visible ? 1 : 0,
       transition: { staggerChildren: 0.05, when: "beforeChildren" },
@@ -16,9 +16,8 @@ const TitleH5 = ({ title }) => {
 
   const child = {
     hidden: {
-      opacity: 0,
-      y: visible ? 0 : 50,
-      transition: { type: "spring", damping: 20, stiffness: 100 },
+      opacity: !visible ? 0 : 1,
+      y: !visible ? 50 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,

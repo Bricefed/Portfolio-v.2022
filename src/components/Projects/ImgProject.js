@@ -7,9 +7,8 @@ const ImgProject = ({ img, title, link }) => {
 
   const imgProject = {
     hidden: {
-      opacity: visible ? 0 : 1,
-      x: visible ? 0 : 250,
-      transition: { type: "spring", damping: 30, stiffness: 150 },
+      opacity: !visible ? 1 : 0,
+      x: !visible ? 250 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,

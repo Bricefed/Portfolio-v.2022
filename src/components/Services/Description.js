@@ -8,7 +8,7 @@ const Description = ({ description }) => {
 
   //SPAWN ANIMATION
   const container = {
-    hidden: { opacity: visible ? 1 : 0 },
+    hidden: { opacity: !visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
       transition: { staggerChildren: 0.025, when: "beforeChildren" },
@@ -17,10 +17,9 @@ const Description = ({ description }) => {
 
   const child = {
     hidden: {
-      opacity: visible ? 1 : 0,
-      x: visible ? 0 : -20,
-      y: visible ? 0 : -10,
-      transition: { type: "spring", damping: 20, stiffness: 100 },
+      opacity: !visible ? 0 : 1,
+      x: !visible ? -20 : 0,
+      y: !visible ? -10 : 0,
     },
     visible: {
       opacity: visible ? 1 : 0,
