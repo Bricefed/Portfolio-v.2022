@@ -29,7 +29,7 @@ const TitleH5 = ({ title }) => {
 
   return (
     <>
-      <Waypoint onEnter={() => setVisible(true)} />
+      <Waypoint onEnter={() => setVisible(true)} bottomOffset="30%" />
       <motion.h5 variants={container} initial="hidden" animate="visible">
         {letter.map((text, k) => (
           <motion.span key={k} variants={child}>

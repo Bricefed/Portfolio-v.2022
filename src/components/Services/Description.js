@@ -8,14 +8,10 @@ const Description = ({ description }) => {
 
   //SPAWN ANIMATION
   const container = {
-    hidden: { opacity: visible ? 0 : 1 },
+    hidden: { opacity: visible ? 1 : 0 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: {
-        staggerChildren: 0.025,
-        when: "beforeChildren",
-        delay: 0.5,
-      },
+      transition: { staggerChildren: 0.025, when: "beforeChildren" },
     },
   };
 

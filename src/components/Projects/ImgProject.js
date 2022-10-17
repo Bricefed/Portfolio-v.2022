@@ -19,7 +19,7 @@ const ImgProject = ({ img, title, link }) => {
   };
   return (
     <>
-      <Waypoint onEnter={() => setVisible(true)} bottomOffset="200px" />
+      <Waypoint onEnter={() => setVisible(true)} bottomOffset="30%" />
       <motion.div
         className="img-box see-more"
         variants={imgProject}

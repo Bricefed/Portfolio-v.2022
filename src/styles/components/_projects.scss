@@ -68,6 +68,7 @@ section#projects {
           width: max-content;
           transition: letter-spacing .3s;
           color: $grey;
+          display: flex;
           user-select: none;
           cursor: none;
 

@@ -1,0 +1,40 @@
+.loading-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark;
+  color: $light;
+  height: 100vh;
+
+  .divider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transform: translateY(-50%);
+    background: $light;
+    animation: load 4s ease-in-out forwards;
+  }
+
+  h1 {
+    justify-content: center;
+  }
+}
+
+@keyframes load {
+  80% {
+    width: 100%;
+  }
+
+  80.1% {
+    width: 100%;
+    height: 3px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
