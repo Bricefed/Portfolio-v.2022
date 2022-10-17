@@ -44,6 +44,9 @@ a {
 }
 
 p.description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.5px;
   width: min(750px, 95%);
   font-size: clamp(1.6rem, 1.3435rem + 0.5128vw, 2rem);
   line-height: 1.5em;

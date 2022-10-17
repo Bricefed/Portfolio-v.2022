@@ -2,15 +2,20 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const Description = ({ text }) => {
+const Description = ({ description }) => {
   const [visible, setVisible] = useState(false);
-  const words = text.split(" ");
+  const words = description.split(" ");
 
+  //SPAWN ANIMATION
   const container = {
     hidden: { opacity: visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.035, delay: 1, when: "beforeChildren" },
+      transition: {
+        staggerChildren: 0.025,
+        when: "beforeChildren",
+        delay: 0.5,
+      },
     },
   };
 
@@ -31,7 +36,7 @@ const Description = ({ text }) => {
 
   return (
     <>
-      <Waypoint onEnter={() => setVisible(true)} />
+      <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
       <motion.p
         className="description"
         variants={container}

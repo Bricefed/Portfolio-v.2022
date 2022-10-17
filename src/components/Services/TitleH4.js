@@ -2,17 +2,16 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const Service = ({ title, description }) => {
+const TitleH4 = ({ title }) => {
   const [visible, setVisible] = useState(false);
   const letter = Array.from(title);
 
+  //SPAWN ANIMATION
   const container = {
-    hidden: {
-      opacity: visible ? 0 : 1,
-    },
+    hidden: { opacity: visible ? 0 : 1 },
     visible: {
       opacity: visible ? 1 : 0,
-      transition: { staggerChildren: 0.07, when: "beforeChildren" },
+      transition: { staggerChildren: 0.05, when: "beforeChildren" },
     },
   };
 
@@ -30,20 +29,17 @@ const Service = ({ title, description }) => {
   };
 
   return (
-    <motion.div variants={container} initial="hidden" animate="visible">
+    <>
       <Waypoint onEnter={() => setVisible(true)} bottomOffset="150px" />
-      <motion.h4>
+      <motion.h4 variants={container} initial="hidden" animate="visible">
         {letter.map((text, k) => (
           <motion.span key={k} variants={child}>
             {text}
           </motion.span>
         ))}
       </motion.h4>
-      <motion.p className="description" variants={child}>
-        {description}
-      </motion.p>
-    </motion.div>
+    </>
   );
 };
 
-export default Service;
+export default TitleH4;
