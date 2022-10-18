@@ -1,4 +1,4 @@
-import LogoBF from "./imgs/logo.svg";
+import LogoBF from "./imgs/logo.png";
 import { motion } from "framer-motion";
 
 const Logo = ({ anim }) => {
