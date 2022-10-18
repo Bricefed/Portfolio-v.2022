@@ -9,12 +9,7 @@ const Scroller = () => {
     const text = document.querySelector(".scroller .text p");
     text.innerHTML = text.innerText
       .split("")
-      .map((char, k) => {
-        return `
-        <span style="transform: rotate(${k * 8.6}deg)" 
-        key=${k}>${char}</span>
-        `;
-      })
+      .map((char, k) => `<span key=${k}>${char}</span>`)
       .join("");
   }, [visible]);
 
@@ -38,7 +33,7 @@ const Scroller = () => {
         <div className="circle">
           <div className="arrow">↓</div>
           <div className="text">
-            <p>Scroll-pour-explorer •</p>
+            <p>Scroll-Scroll-Scroll-</p>
           </div>
         </div>
       </motion.div>

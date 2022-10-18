@@ -36,6 +36,12 @@
         left: 50%;
         font-size: 2rem;
         transform-origin: 0 100px;
+
+        @for $i from 1 through 40 {
+          &:nth-child(#{$i}) {
+            transform: rotate($i * 17.3deg);
+          }
+        }
       }
     }
   }
