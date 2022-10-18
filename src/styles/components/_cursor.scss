@@ -12,7 +12,7 @@
   user-select: none;
   pointer-events: none;
   z-index: 10;
-  transition: width .5s, background .5s, mix-blend-mode .5s;
+  transition: width .5s, height .5s, background .5s, mix-blend-mode .5s;
 
   .see-more,
   .copy {
