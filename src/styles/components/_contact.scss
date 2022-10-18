@@ -16,7 +16,8 @@ section#contact {
   .texts {
     display: flex;
     gap: 8rem;
-    padding-inline: clamp(1rem, -113.111rem + 105.5556vw, 22rem);
+    padding-right: clamp(1rem, -113.111rem + 105.5556vw, 22rem);
+    padding-left: clamp(1rem, -113.111rem + 105.5556vw, 22rem);
     font-size: clamp(2rem, -1.0555rem + 2.7778vw, 2.5rem);
     user-select: none;
     cursor: default;

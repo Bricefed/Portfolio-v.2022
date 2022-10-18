@@ -11,14 +11,14 @@
     position: relative;
     @include df-center;
     width: 200px;
-    aspect-ratio: 1/1;
+    height: 200px;
     border-radius: 50%;
 
     .arrow {
       position: absolute;
       @include df-center;
       width: 130px;
-      aspect-ratio: 1/1;
+      height: 130px;
       border-radius: 50%;
       background: $dark;
       color: $light;
@@ -28,7 +28,7 @@
     .text {
       position: absolute;
       width: 100%;
-      aspect-ratio: 1/1;
+      height: 100%;
       animation: rotation 10s infinite linear;
 
       span {

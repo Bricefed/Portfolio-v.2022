@@ -2,8 +2,9 @@ section#projects {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-right: clamp(3rem, -39.7778rem + 38.8889vw, 10rem);
+  padding-right: clamp(1rem, -39.7778rem + 38.8889vw, 10rem);
   gap: 50px;
+  overflow: hidden;
 
   @media (max-width: 880px) {
     h3 {
@@ -13,7 +14,7 @@ section#projects {
 
   .container-project {
     display: flex;
-    padding-left: clamp(3rem, -38.8rem + 47.5vw, 22rem);
+    padding-left: clamp(1rem, -38.8rem + 47.5vw, 22rem);
 
     @media (max-width: 880px) {
       flex-direction: column;
@@ -111,7 +112,7 @@ section#projects {
           transform: translate(-50%, -50%);
           @include df-center;
           width: 120px;
-          aspect-ratio: 1/1;
+          height: 120px;
           background: white;
           border-radius: 50%;
           font-size: 3rem;

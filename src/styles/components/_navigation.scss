@@ -2,7 +2,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: clamp(1rem, -6.9898rem + 17.1795vw, 15rem);
+  padding-right: clamp(1rem, -6.9898rem + 17.1795vw, 15rem);
+  padding-left: clamp(1rem, -6.9898rem + 17.1795vw, 15rem);
   font-size: clamp(1.5rem, 1.1795rem + 0.641vw, 2rem);
   padding-top: 10px;
 
