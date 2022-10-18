@@ -29,7 +29,7 @@
       position: absolute;
       width: 100%;
       aspect-ratio: 1/1;
-      animation: rotation 10s infinite linear;
+      // animation: rotation 10s infinite linear;
 
       span {
         position: absolute;
@@ -39,7 +39,7 @@
 
         @for $i from 1 through 40 {
           &:nth-child(#{$i}) {
-            transform: rotate($i * 17.3deg);
+            transform: rotate($i * 8.75deg);
           }
         }
       }
