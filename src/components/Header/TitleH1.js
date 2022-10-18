@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 import { motion } from "framer-motion";
 
-const TitleH1 = ({ text }) => {
+const TitleH1 = () => {
   const [visible, setVisible] = useState(false);
-  const letter = Array.from(text);
+  const letter = Array.from("Développeur créatif");
 
   //SPAWN ANIMATION
   const container = {
@@ -39,11 +39,26 @@ const TitleH1 = ({ text }) => {
     <>
       <Waypoint onEnter={() => setVisible(true)} />
       <motion.h1 variants={container} initial="hidden" animate="visible">
-        {letter.map((text, k) => (
-          <motion.span key={k} variants={child}>
-            {text}
-          </motion.span>
-        ))}
+        <div>
+          {letter.map(
+            (text, k) =>
+              k <= 10 && (
+                <motion.span key={k} variants={child}>
+                  {text}
+                </motion.span>
+              )
+          )}
+        </div>
+        <div>
+          {letter.map(
+            (text, k) =>
+              k > 10 && (
+                <motion.span key={k} variants={child}>
+                  {text}
+                </motion.span>
+              )
+          )}
+        </div>
         <motion.img
           src={"./icons/triangle.png"}
           alt="Triangle"

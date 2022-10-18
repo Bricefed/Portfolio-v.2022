@@ -3,8 +3,8 @@ h2 {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  width: clamp(30rem, 10.3659rem + 42.6829vw, 65rem);
-  font-size: clamp(4rem, 1.1952rem + 6.0976vw, 9rem);
+  width: clamp(30rem, 10.3659rem + 42.6829vw, 66rem);
+  font-size: clamp(4rem, 1.1952rem + 6.0976vw, 9.2rem);
   font-weight: 400;
   line-height: 1em;
   letter-spacing: -3px;
@@ -13,12 +13,20 @@ h2 {
   cursor: default;
 }
 
+h1 {
+  flex-direction: row;
+
+  div {
+    display: flex;
+  }
+}
+
 h2 {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-self: flex-end;
-  width: clamp(13.5rem, 4.2438rem + 20.122vw, 30rem);
+  width: clamp(13.5rem, 4.2438rem + 20.122vw, 31rem);
 }
 
 h3 {

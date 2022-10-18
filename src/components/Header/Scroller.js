@@ -16,7 +16,7 @@ const Scroller = () => {
         `;
       })
       .join("");
-  }, []);
+  }, [visible]);
 
   const container = {
     hidden: { scale: !visible ? 0 : 1 },
@@ -27,20 +27,22 @@ const Scroller = () => {
   };
 
   return (
-    <motion.div
-      className="scroller"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="circle">
-        <div className="arrow">↓</div>
-        <div className="text">
-          <p>Scroll-pour-explorer •</p>
-        </div>
-      </div>
+    <>
       <Waypoint onEnter={() => setVisible(true)} />
-    </motion.div>
+      <motion.div
+        className="scroller"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="circle">
+          <div className="arrow">↓</div>
+          <div className="text">
+            <p>Scroll-pour-explorer •</p>
+          </div>
+        </div>
+      </motion.div>
+    </>
   );
 };
 

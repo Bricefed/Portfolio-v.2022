@@ -26,14 +26,31 @@ const TitleH2 = ({ text }) => {
     },
   };
   return (
-    <motion.h2 variants={container} initial="hidden" animate="visible">
+    <>
       <Waypoint onEnter={() => setVisible(true)} />
-      {letter.map((text, k) => (
-        <motion.span key={k} variants={child}>
-          {text}{" "}
-        </motion.span>
-      ))}
-    </motion.h2>
+      <motion.h2 variants={container} initial="hidden" animate="visible">
+        <div>
+          {letter.map(
+            (text, k) =>
+              k <= 5 && (
+                <motion.span key={k} variants={child}>
+                  {text}
+                </motion.span>
+              )
+          )}
+        </div>
+        <div>
+          {letter.map(
+            (text, k) =>
+              k > 5 && (
+                <motion.span key={k} variants={child}>
+                  {text}
+                </motion.span>
+              )
+          )}
+        </div>
+      </motion.h2>
+    </>
   );
 };
 
